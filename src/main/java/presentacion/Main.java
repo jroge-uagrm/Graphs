@@ -137,7 +137,7 @@ public class Main {
         int destino = Integer.parseInt(myObj.nextLine());
         mostrarLn("El camino mas barato en Bs. es:");
         List<Integer> camino = G.shortestPathRecorridoCosto(origen, destino);
-        mostrarLn(G.getNombre(camino.get(0)) + "->" + G.getNombre(camino.get(1)) + " - Bs." + G.getDistancia(camino.get(0), camino.get(1)));
+        mostrarLn(G.getNombre(camino.get(0)) + "->" + G.getNombre(camino.get(1)) + " - Bs." + G.getCosto(camino.get(0), camino.get(1)));
         for (int i = 2; i <= camino.size() - 1; i++) {
             int idOrigen = camino.get(i - 1);
             int idDestino = camino.get(i);
